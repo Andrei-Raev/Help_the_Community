@@ -58,6 +58,7 @@ table {
     border-collapse: collapse;
     border-radius: 20px;
     box-shadow: 0 0 10px 15px #B0E0E6;
+    margin-bottom: 190px;
 }
 
 th {
@@ -219,10 +220,11 @@ li {
 }
 
 .l {
+    width: 300px;
     height: 10px;
     display: block;
     margin: auto;
-    padding: 1rem 1.25rem;
+    padding: 10px 0.5rem;
     text-decoration: none;
     position: relative;
     -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
@@ -325,7 +327,7 @@ li {
 #bfb4ba*/
 
 .bottom_box {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 35px 35px 0 0;
     text-align: right;
 
@@ -338,5 +340,5 @@ li {
 
     height: 33%;
     position: fixed;
-    width: 300px;
+    width: 390px;
 }
