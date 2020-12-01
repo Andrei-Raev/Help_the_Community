@@ -6,7 +6,7 @@
 ::selection {
     background-blend-mode: difference;
     mix-blend-mode: inherit;
-    color: #bfb4ba;
+    color: #AAAAAA;
 }
 
 @keyframes rainbow {
@@ -41,7 +41,7 @@ root {
 body {
     background-color: white;
 
-    background-image: url(main_bg.jpg);
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -53,18 +53,46 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 95%;
+    text-align: left;
+    border-collapse: collapse;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 15px #B0E0E6;
+}
+
+th {
+    padding: 10px 8px;
+    background: #F5FEFF;
+    font-size: 2rem;
+}
+
+table th:first-child {
+    border-top-left-radius: 20px;
     text-align: center;
-    padding: 10px;
-    margin-top: 50px;
 }
 
-td tr {
-    vertical-align: middle;
-    horiz-align: center;
+table th:last-child {
+    border-top-right-radius: 20px;
+    text-align: center;
 }
 
-.table_link {
+td {
+    border-top: 10px solid #B0E0E6;
+    padding: 8px;
+    background: #F5FEFF;
+}
+
+table td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+table td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+
+#back {
+    position: fixed;
     background-color: white;
     border: 0;
     padding: 10px 40px;
@@ -73,24 +101,26 @@ td tr {
     font-size: 50px;
     border-radius: 10px;
     width: 270px;
-    margin: 10px;
+    bottom: 3%;
+    left: 3%;
+    z-index: 9999;
 
     outline: 0;
-    box-shadow: 0 5px 10px #afac45;
+    box-shadow: 0 5px 10px #35767b;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     cursor: default;
     border-bottom: 4px solid #d9d9d9;
 }
 
-.table_link:hover {
-    box-shadow: 0 15px 25px -5px #afac45;
+#back:hover {
+    box-shadow: 0 15px 25px -5px #35767b;
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 
-.table_link:active {
-    box-shadow: 0 4px 8px #afac45;
+#back:active {
+    box-shadow: 0 4px 8px #35767b;
     -webkit-transform: scale(0.98);
     transform: scale(0.98);
 }
@@ -127,19 +157,19 @@ th, td {
     font-size: 70px;
     font-weight: bold;
     width: 45%;
-    background-color: #ad787e;
+    background-color: #B0E0E6;
     text-align: center;
     border-radius: 15px;
     padding-bottom: 25px;
     padding-top: 10px;
-    box-shadow: 0 0 15px 5px #D29299 inset;
+    box-shadow: 0 0 15px 5px #B8EAF1 inset;
     border: none;
     transition: all 0.3s;
 }
 
 #site_title:hover {
     /*box-shadow: 0 0 15px 10px #AD787ECF;*/
-    box-shadow: 0 0 20px 20px #EEA5AE inset;
+    box-shadow: 0 0 20px 20px #B8F7FF inset;
 }
 
 /*
@@ -188,8 +218,7 @@ li {
     list-style-type: none;
 }
 
-a {
-    width: 220px;
+.l {
     height: 10px;
     display: block;
     margin: auto;
@@ -201,7 +230,7 @@ a {
     z-index: 1;
 }
 
-a:after {
+.l:after {
     content: '';
     display: block;
     height: 2px;
@@ -217,15 +246,67 @@ a:after {
     z-index: -1;
 }
 
-a:hover {
+.l:hover {
     color: #2D2D2D;
 }
 
-a:hover:after {
+.l:hover:after {
     right: 0;
     left: 0;
     height: 90%;
     border-radius: 10px;
+}
+
+
+.t_l {
+    color: #0d3434;
+    font-size: 20px;
+    margin: auto;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    z-index: 1;
+
+    background: #0d3434;
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.t_l:hover {
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: rainbow 20s ease infinite;
+    animation: rainbow 15s ease infinite;
+}
+
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 
