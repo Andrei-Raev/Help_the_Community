@@ -29,6 +29,35 @@ body {
 
 }
 
+
+img {
+    display: inline-block;
+    cursor: zoom-in;
+    border: 0;
+    max-height: 210px;
+    max-width: 250px;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+
+}
+
+img:hover {
+    box-shadow: 0 0 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
+
 table {
     width: 95%;
     text-align: left;
@@ -230,25 +259,25 @@ li {
 
 @-webkit-keyframes rainbow {
     0% {
-        background-position: 0% 50%
+        background-position: 0 50%
     }
     50% {
         background-position: 100% 50%
     }
     100% {
-        background-position: 0% 50%
+        background-position: 0 50%
     }
 }
 
 @keyframes rainbow {
     0% {
-        background-position: 0% 50%
+        background-position: 0 50%
     }
     50% {
         background-position: 100% 50%
     }
     100% {
-        background-position: 0% 50%
+        background-position: 0 50%
     }
 }
 
