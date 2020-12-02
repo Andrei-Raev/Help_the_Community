@@ -120,8 +120,22 @@ table td:last-child {
     transition: all 0.8s;
 }
 
+h3 {
+    padding-bottom: 0;
+}
+
 #site_title:hover {
     /*box-shadow: 0 0 15px 10px #AD787ECF;*/
+    box-shadow: 0 0 20px 20px #B8F7FF inset;
+}
+
+#aaa {
+    box-shadow: 0 0 15px 5px #B8EAF1 inset;
+    transition: all 0.8s;
+    text-align: left;
+}
+
+#aaa:hover {
     box-shadow: 0 0 20px 20px #B8F7FF inset;
 }
 
